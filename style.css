@@ -1,0 +1,79 @@
+/* Base styles */
+body {
+    background-color: #f8f9fa;
+    font-family: 'Segoe UI', Tahoma, Geneva, Verdana, sans-serif;
+    margin: 0;
+    padding: 0;
+}
+
+/* Sidebar (if used) */
+.sidebar {
+    background-color: #fff;
+    padding: 20px;
+    border-right: 2px solid #ddd;
+    text-align: center;
+}
+.sidebar img {
+    border-radius: 8px;
+    box-shadow: 0 4px 8px rgba(0,0,0,0.1);
+}
+.company-name {
+    color: #007bff;
+    font-weight: bold;
+}
+
+/* Main container */
+.container {
+    padding: 20px;
+}
+h1, h2, h3, h4 {
+    color: #343a40;
+}
+
+/* Form styling */
+form {
+    margin-top: 20px;
+}
+.form-group {
+    margin-bottom: 15px;
+}
+.btn {
+    padding: 10px 20px;
+    border-radius: 5px;
+}
+
+/* Dynamic region block styling */
+.region-block {
+    background-color: #e9ecef;
+    padding: 15px;
+    margin-bottom: 20px;
+    border-radius: 5px;
+}
+.region-block h4 {
+    margin-top: 0;
+    color: #495057;
+}
+
+/* Result page styling */
+.result-bg {
+    background: linear-gradient(to right, #74ebd5, #ACB6E5);
+    min-height: 100vh;
+}
+.final-panorama {
+    border: 5px solid #fff;
+    border-radius: 8px;
+    margin-bottom: 20px;
+    box-shadow: 0 6px 12px rgba(0,0,0,0.2);
+}
+.yield-info {
+    background-color: rgba(255,255,255,0.9);
+    padding: 15px;
+    border-radius: 5px;
+}
+
+/* Responsive adjustments */
+@media (max-width: 768px) {
+    .sidebar {
+        display: none;
+    }
+}

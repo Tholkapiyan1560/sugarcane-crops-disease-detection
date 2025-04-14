@@ -1,0 +1,151 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+  <meta charset="UTF-8">
+  <title>Vasthak Pvt Limited - Empowering Agriculture</title>
+  <meta name="viewport" content="width=device-width, initial-scale=1.0">
+  <!-- Bootstrap 5 CSS -->
+  <link href="https://cdn.jsdelivr.net/npm/bootstrap@5.3.0/dist/css/bootstrap.min.css" rel="stylesheet">
+  <!-- Custom CSS -->
+  <link rel="stylesheet" href="{{ url_for('static', filename='css/style.css') }}">
+  <style>
+    /* Full-screen background with overlay */
+    body, html {
+      height: 100%;
+      margin: 0;
+      font-family: 'Open Sans', sans-serif;
+    }
+    body {
+      background: url('https://images.unsplash.com/photo-1564869730705-90e77b736dc1?ixlib=rb-1.2.1&auto=format&fit=crop&w=1600&q=80') no-repeat center center fixed;
+      background-size: cover;
+    }
+    .overlay {
+      position: absolute;
+      top: 0; left: 0;
+      height: 100%; width: 100%;
+      background: rgba(0, 0, 0, 0.6);
+      z-index: 1;
+    }
+    /* Navbar */
+    .navbar {
+      background-color: rgba(0, 123, 255, 0.9);
+      box-shadow: 0 2px 4px rgba(0,0,0,0.3);
+    }
+    .navbar-brand {
+      font-size: 1.8rem;
+      font-weight: 700;
+      color: #fff !important;
+    }
+    /* Hero Section */
+    .hero-section {
+      position: relative;
+      z-index: 2;
+      height: 80vh;
+      display: flex;
+      align-items: center;
+      justify-content: center;
+      text-align: center;
+      color: #fff;
+      padding: 0 20px;
+    }
+    .hero-section h1 {
+      font-size: 3rem;
+      font-weight: 700;
+      margin-bottom: 20px;
+    }
+    .hero-section p {
+      font-size: 1.25rem;
+      margin-bottom: 30px;
+    }
+    /* Form Section */
+    #formSection {
+      background: #fff;
+      border-radius: 10px;
+      padding: 40px;
+      margin-top: -60px;
+      box-shadow: 0 8px 16px rgba(0,0,0,0.3);
+      z-index: 2;
+      position: relative;
+    }
+    #formSection h2 {
+      margin-bottom: 30px;
+      color: #343a40;
+    }
+    .region-block {
+      background: #f8f9fa;
+      padding: 20px;
+      margin-bottom: 20px;
+      border-radius: 8px;
+      box-shadow: 0 2px 6px rgba(0,0,0,0.1);
+    }
+    .region-block h4 {
+      margin-top: 0;
+      color: #007bff;
+    }
+    .form-group label {
+      font-weight: 600;
+    }
+    /* Footer */
+    .footer {
+      background: #343a40;
+      color: #fff;
+      text-align: center;
+      padding: 20px 0;
+      z-index: 2;
+      position: relative;
+    }
+  </style>
+</head>
+<body>
+  <div class="overlay"></div>
+  <!-- Navbar -->
+  <nav class="navbar navbar-expand-lg fixed-top">
+    <div class="container">
+      <a class="navbar-brand" href="#">Vasthak Pvt Limited</a>
+      <button class="navbar-toggler" type="button" data-bs-toggle="collapse" data-bs-target="#navbarNav" 
+              aria-controls="navbarNav" aria-expanded="false" aria-label="Toggle navigation">
+        <span class="navbar-toggler-icon"></span>
+      </button>
+      <div class="collapse navbar-collapse" id="navbarNav">
+        <ul class="navbar-nav ms-auto">
+          <li class="nav-item"><a class="nav-link text-white" href="#">Home</a></li>
+          <li class="nav-item"><a class="nav-link text-white" href="#">About</a></li>
+          <li class="nav-item"><a class="nav-link text-white" href="#">Services</a></li>
+          <li class="nav-item"><a class="nav-link text-white" href="#">Contact</a></li>
+        </ul>
+      </div>
+    </div>
+  </nav>
+  <!-- Hero Section -->
+  <header class="hero-section">
+    <div class="container">
+      <h1>Empowering Agriculture with Advanced Analysis</h1>
+      <p>Set parameters for disease detection, gap analysis, and Edge Detection.</p>
+      <a href="#formSection" class="btn btn-success btn-lg">Get Started</a>
+    </div>
+  </header>
+  <!-- Form Section -->
+  <section id="formSection" class="container my-5">
+    <h2 class="text-center">Enter Analysis Parameters</h2>
+    <form method="post" id="regionsForm">
+      <div class="mb-4">
+        <div class="form-group">
+          <label for="region_count">Number of Regions to Process:</label>
+          <input type="number" name="region_count" id="region_count" class="form-control" value="1" min="1" required>
+        </div>
+      </div>
+      <div id="region_container"></div>
+      <button type="submit" class="btn btn-primary btn-block">Process Regions</button>
+    </form>
+  </section>
+  <!-- Footer -->
+  <footer class="footer">
+    <div class="container">
+      <p>&copy; 2025 Vasthak Pvt Limited. All Rights Reserved.</p>
+    </div>
+  </footer>
+  <!-- Bootstrap JS Bundle and custom JS -->
+  <script src="https://cdn.jsdelivr.net/npm/bootstrap@5.3.0/dist/js/bootstrap.bundle.min.js"></script>
+  <script src="{{ url_for('static', filename='js/main.js') }}"></script>
+</body>
+</html>
